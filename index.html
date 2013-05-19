@@ -19,6 +19,14 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	 <style type="text/css">
+      .social {
+      	margin-right: 10px;
+      }
+      #share {
+      	margin-left: 10px;
+      }
+    </style>
 	<script src="http://www.rdio.com/api/api.js?client_id=301qquI78duW6zseJptpIQ"></script>
 </head>
 <body>
@@ -34,14 +42,26 @@
 		</div>
 
 		<div id="sidebar_content">
-			<div id="intro">
-				<p>Philadelphia is the quintessential american city, giving birth to democracy in America and giving our country a sense of national identity. Jazz is the quintessential american music and is also part of our national identity. Fittingly, Philadelphia has a vibrant jazz history from historic places to legendary jazz clubs - you’ll find them all mapped here.</p>
-			</div>
-			<div id="tech">
-				<p>The data in this map is contained in a <a href="https://docs.google.com/spreadsheet/ccc?key=0AsNAXuadeXIxdGJCT0hsWXZiLTNVZklrSUhQRzYxRVE#gid=0" target="_blank">Google spreadsheet</a>. Philadelphia jazz lovers can help make it better b contributing and improving information.</p>
-				<p>This app is built with <a href="http://builtbybalance.com/Tabletop/">Tabletop.js</a>, <a href="http://leafletjs.com/reference.html">Leaflet</a>, the Rdio and Echnoest APIs and is hosted on GutHub pages. Contribute to this project on <a href="https://github.com/mheadd/philly-jazz-app">GitHub</a>.</p>
-			</div>
-			<div id="artistMedia"></div>
+				<p>Philadelphia is the birthplace of our democracy. This quintessential American city made a major contribution to jazz, America's unique art form.</p>
+
+				<p>All That Philly Jazz is mapping Philadelphia's rich jazz legacy. We are mapping Philly's historic places, including the John Coltrane House, markers, Walk of Fame plaques and murals. We will breathe life into legendary jazz clubs like the Showboat, Pep's, Blue Note, Up Jumped the Devil, Fantasy Lounge, and clubs along West 52nd Street, aka "The Strip." Clubs like the Aqua Lounge, Top Shelf, Mr. Silk's Third Base and Foo-Foo Regan's.</p>
+
+				<p>We will take visitors back to the days when jazz legends performed at the Uptown, the Royal, Earle Theater, and the Lincoln Theater. To contextualize the images, we will include location-based audio and information about the performers.</p>
+
+				<p>Help us tell the story. You can share your memories <a href="https://docs.google.com/spreadsheet/ccc?key=0AsNAXuadeXIxdGJCT0hsWXZiLTNVZklrSUhQRzYxRVE#gid=0" target="_blank">here</a>.</p>
+		<div id="share">
+        	<ul>
+            <li class="float_left">
+               <a href="http://twitter.com/phillyjazzapp"><img class="social" src="img/twitter_icon_small.png" height="30" width="30"/><a/>
+            </li>
+            <li class="float_left">
+                <a href="http://facebook.com/allthatphillyjazz"><img class="social"  src="img/facebook-icon-small.jpg" height="30" width="30"/></a>
+            </li>
+            <li>
+            	<a href="#"><img class="social"  src="img/g+42.png" height="30" width="30"/></a>
+            </li>
+        	</ul>
+    	</div>
     	</div>
 	</div>
 
@@ -64,6 +84,8 @@
 		<div id="credits_box">
 			<div id="credits_content">
 				<p>Created by Faye Anderson and Mark Headd for the Philly Music Day Hackathon (May 2013)</p>
+				<p>This app is built with <a href="http://builtbybalance.com/Tabletop/">Tabletop.js</a>, <a href="http://leafletjs.com/reference.html">Leaflet</a>, the Rdio and Echnoest APIs and is hosted on GutHub pages. Contribute to this project on <a href="https://github.com/mheadd/philly-jazz-app">GitHub</a>.</p>
+				<p>Site framework by <a href="https://github.com/csessig86/tabletop_to_leaflet">Chris Essig</a>.</p>
 			</div>
     	</div>
     	<div id="toggle_credits" class="btn" type="button">Credits</div>

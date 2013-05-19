@@ -139,11 +139,11 @@ $('#toggle_credits').click(function() {
 		isVisibleDamage = true;
 	}
 });
-/*
+
 R.ready(function() {
-	R.player.play({source: "a171827"}); // Radiohead, The Bends
+	R.player.play({source: "a236082"}); // Coltrane, A Love Supreme
 });
-*/
+
 var echonest = new EchoNest("VHJCDGJN5VA9MCITN");
 function searchEchoNest(name) {
 	echonest.artist(name).images( function(imageCollection) {
