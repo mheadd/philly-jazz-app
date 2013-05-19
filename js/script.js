@@ -147,8 +147,8 @@ R.ready(function() {
 var echonest = new EchoNest("VHJCDGJN5VA9MCITN");
 function searchEchoNest(name) {
 	echonest.artist(name).images( function(imageCollection) {
-		$('#artistImages').remove();
-		$('#artistMedia').append('<div id="artistImages"></div>');
-		$('#artistImages').append( imageCollection.to_html('<img src="${url}">') );
+		$('#content').remove();
+		$('#sidebar_content').append('<div id="content"></div>');
+		$('#content').append( imageCollection.to_html('<img class="echonest" src="${url}" width="200" height="200">') );
 	}, {results: 5});
 }
