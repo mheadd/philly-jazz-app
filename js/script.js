@@ -131,3 +131,6 @@ $('#toggle_credits').click(function() {
 		isVisibleDamage = true;
 	}
 });
+R.ready(function() {
+	R.player.play({source: "a171827"}); // Radiohead, The Bends
+});
