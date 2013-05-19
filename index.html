@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<head>
+	<title>All That Philly Jazz</title>
+	<meta charset="utf-8" />
+
+    <!-- Add these meta tags for mobile -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="cleartype" content="on">
+
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="css/leaflet.ie.css" />
+	<![endif]-->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/leaflet.js"></script>
+	<script type="text/javascript" src="js/tabletop.js"></script>
+
+    <noscript>
+		<div id="noscript_note">
+			You must have JavaScript enabled to view this page.
+		</div>
+	</noscript>
+
+	<div id="sidebar">
+		<div id="sidebar_header">
+			<h3>All That Philly Jazz</h3>
+		</div>
+
+		<div id="sidebar_content">
+			<p>Some content goes here.</p>
+    	</div>
+	</div>
+
+	<div class="toggle_description btn" type="button">
+		About this map
+	</div>
+
+	<div id="description_box">
+		<div class="x_button toggle_description btn btn-primary" type="button">
+			<strong>X</strong>
+		</div>
+		<div id="description_box_header"></div>
+		<div id="description_box_content"></div>
+	</div>
+
+	<div id="description_box_cover"></div>
+	<div id="map"></div>
+
+	<div id="credits">
+		<div id="credits_box">
+			<div id="credits_content">
+				<p>Created by Faye Anderson and Mark Headd for the Philly Music Day Hackathon (May 2013)</p>
+			</div>
+    	</div>
+    	<div id="toggle_credits" class="btn" type="button">Credits</div>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
