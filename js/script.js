@@ -66,11 +66,18 @@ function startUpLeafet(tabletopData) {
 		var myIcon = L.icon({iconUrl: 'js/images/' + marker, iconSize: [17, 28]});
 		*/
 
+		if(dataType == 'Historic Marker') {
+			marker = 'marker-icon-dark.png';
+		}
+		else {
+			marker = 'marker-icon.png';
+		}
+		var myIcon = L.icon({iconUrl: 'js/images/' + marker});
+
 		// Add to our marker
 		marker_location = new L.LatLng(dataLat, dataLong);
 		// Create the marker
-    	//layer = new L.Marker(marker_location, {icon: myIcon});
-    	layer = new L.Marker(marker_location);
+    	layer = new L.Marker(marker_location, {icon: myIcon});
     
     	// Create the popup
     	// Change 'Address', 'City', etc.
@@ -82,6 +89,7 @@ function startUpLeafet(tabletopData) {
     	popup += dataDecription.length > 0 ? "<strong>Description:</strong> " + dataDecription + "<br />" : "";
     	popup += dataArtist.length > 0 ? "<strong>Artist:</strong> " + dataArtist + "<br />" : "";
     	popup += dataLink.length > 0 ? "<strong><a href=\"" + dataLink + "\">Learn more</a></strong><br />" : "";
+    	popup += dataType == 'Historic Marker' ? "<strong><a href=\"javascript:searchEchoNest('" + dataArtist + "')\">Search Echonest Images</a></strong><br />" : "";
     	popup += "</div>";
     	// Add to our marker
 		layer.bindPopup(popup);
@@ -131,6 +139,16 @@ $('#toggle_credits').click(function() {
 		isVisibleDamage = true;
 	}
 });
+/*
 R.ready(function() {
 	R.player.play({source: "a171827"}); // Radiohead, The Bends
 });
+*/
+var echonest = new EchoNest("VHJCDGJN5VA9MCITN");
+function searchEchoNest(name) {
+	echonest.artist(name).images( function(imageCollection) {
+		$('#artistImages').remove();
+		$('#artistMedia').append('<div id="artistImages"></div>');
+		$('#artistImages').append( imageCollection.to_html('<img src="${url}">') );
+	}, {results: 5});
+}
