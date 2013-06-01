@@ -141,7 +141,7 @@ $('#toggle_credits').click(function() {
 });
 
 R.ready(function() {
-	R.player.play({source: "a236082"}); // Coltrane, A Love Supreme
+	//R.player.play({source: "a236082"}); // Coltrane, A Love Supreme
 });
 
 var echonest = new EchoNest("VHJCDGJN5VA9MCITN");
