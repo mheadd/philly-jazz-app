@@ -49,6 +49,11 @@ function startUpLeafet(tabletopData) {
 		var dataLat = tabletopData[num].latitude;
 		var dataLong = tabletopData[num].longitude;
 
+		// Skip reocrds that do not yet have lat / lon.
+		if(dataLat.length == 0 || dataLong.lenth == 0) { 
+			continue;
+		}
+
 		// Determine marker type.
 		/*
 		if(dataType == 'Historic Place') {
@@ -85,7 +90,7 @@ function startUpLeafet(tabletopData) {
     	var popup = "<div class=popup_box" + "id=" + num + ">";
     	popup += "<div class='popup_box_header'><strong>" + dataName + "</strong></div>";
     	popup += "<hr />";
-    	popup += "<strong>Address:</strong> " + dataAddress + "<br />";
+    	popup += dataAddress.length > 0 ? "<strong>Address:</strong> " + dataAddress + "<br />" : "";
     	popup += dataDecription.length > 0 ? "<strong>Description:</strong> " + dataDecription + "<br />" : "";
     	popup += dataArtist.length > 0 ? "<strong>Artist:</strong> " + dataArtist + "<br />" : "";
     	popup += dataLink.length > 0 ? "<strong><a href=\"" + dataLink + "\">Learn more</a></strong><br />" : "";
